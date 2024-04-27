@@ -475,7 +475,7 @@ with st.sidebar:
             "Enter your OpenAI API key:",
             type="password",
             help="You can find your OpenAI API key on the [OpenAI dashboard](https://platform.openai.com/account/api-keys).",
-            placeholder= st.secrets.openai_key
+            placeholder= st.secrets["OPENAI_KEY"]
         )
 
         # Add model selection input field to the sidebar
