@@ -1,6 +1,7 @@
 import json
 import re
 import streamlit as st
+import os
 import streamlit.components.v1 as components
 #from mistralai.client import MistralClient
 #from mistralai.models.chat_completion import ChatMessage
@@ -474,6 +475,7 @@ with st.sidebar:
             "Enter your OpenAI API key:",
             type="password",
             help="You can find your OpenAI API key on the [OpenAI dashboard](https://platform.openai.com/account/api-keys).",
+            placeholder= st.secrets.openai_key
         )
 
         # Add model selection input field to the sidebar
