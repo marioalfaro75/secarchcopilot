@@ -470,13 +470,16 @@ with st.sidebar:
     3. Generate a threat list, attack tree and/or mitigating controls for your application 🚀
     """
     )
-        # Add OpenAI API key input field to the sidebar
-        openai_api_key = st.text_input(
-            "Enter your OpenAI API key:",
-            type="password",
-            help="You can find your OpenAI API key on the [OpenAI dashboard](https://platform.openai.com/account/api-keys).",
-            value= st.secrets["OPENAI_KEY"],
-        )
+        # Add OpenAI API key from the streamlit environment variable
+        openai_api_key = st.secrets["OPENAI_KEY"]
+
+        # # Add OpenAI API key input field to the sidebar
+        # openai_api_key = st.text_input(
+        #     "Enter your OpenAI API key:",
+        #     type="password",
+        #     help="You can find your OpenAI API key on the [OpenAI dashboard](https://platform.openai.com/account/api-keys).",
+        #     value= st.secrets["OPENAI_KEY"],
+        # )
 
         # Add model selection input field to the sidebar
         selected_model = st.selectbox(
